@@ -3,10 +3,10 @@
     name: common
     tasks_from: app-setup
 
-- name: NodeJS Configuration
+- name: Python Setup
   include_role:
     name: common
-    tasks_from: nodejs
+    tasks_from: python
 
 - name: Systemd Service
   include_role:
