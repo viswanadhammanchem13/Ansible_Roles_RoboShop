@@ -1,3 +1,4 @@
 CATALOGUE_HOST: catalogue.manchem.site
 USER_HOST: user.manchem.site
 CART_HOST: cart.manchem.site
+SHIPPING_HOST: shipping.manchem.site
