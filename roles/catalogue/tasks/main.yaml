@@ -1,12 +1,12 @@
 - name: app setup
   include_role:
     name: common
-    tasks_from: app-setup.yaml
-  
+    tasks_from: app-setup
+
 - name: NodeJS Configuration
   include_role:
     name: common
-    tasks_from: nodejs.yaml
+    tasks_from: nodejs
 
 - name: copying mongodb repo
   ansible.builtin.copy:
@@ -33,4 +33,4 @@
 - name: Systemd Service
   include_role:
     name: common
-    tasks_from: systemd.yaml
+    tasks_from: systemd
