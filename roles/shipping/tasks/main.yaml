@@ -7,12 +7,7 @@
   include_role:
     name: common
     tasks_from: maven
-
-- name: Installing MySQL Client
-  ansible.builtin.dnf:
-    name: mysql
-    state: present
-
+    
 - name: import data
   # tags:
   # - import
