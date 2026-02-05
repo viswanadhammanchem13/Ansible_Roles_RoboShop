@@ -13,7 +13,7 @@
 - name: Download the application code
   ansible.builtin.get_url:
     url: "https://roboshop-artifacts.s3.amazonaws.com/{{ component }}-v3.zip"
-    dest: /tmp/catalogue.zip
+    dest: "/tmp/{{ component}}.zip"
 
 - name: Extracting the code
   ansible.builtin.unarchive:
