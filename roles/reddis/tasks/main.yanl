@@ -1,7 +1,3 @@
-- name: Cofiguring Redis Data Base
-  hosts: redis 
-  become: yes 
-  tasks:
   - name: Disabling Reddis Module 
     ansible.builtin.command: dnf module disable redis -y
 
