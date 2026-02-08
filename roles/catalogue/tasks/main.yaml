@@ -36,6 +36,8 @@
     tasks_from: systemd
 
 - name: Deployment New Version
+  tags:
+  - deployment
   include_role:
     name: common
     tasks_from: deployment
