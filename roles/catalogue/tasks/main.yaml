@@ -43,7 +43,7 @@
 
 - name: Deployment New Version
   tags:
-  - deployment
+   - deployment
   include_role:
   # import_role:
     name: common
