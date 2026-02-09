@@ -44,7 +44,7 @@
 - name: Deployment New Version
   tags:
   - deployment
-  # include_role:
-  import_role:
+  include_role:
+  # import_role:
     name: common
     tasks_from: deployment
