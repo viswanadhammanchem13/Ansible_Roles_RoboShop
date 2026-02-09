@@ -1,6 +1,6 @@
 - name: Stop the service
-  tags:
-  - deployment
+  # tags:
+  # - deployment
   ansible.builtin.service:
     name: "{{ component }}"
     state: stopped
@@ -22,8 +22,8 @@
     remote_src: yes
 
 - name: Install Dependencies
-  tags:
-   - deployment
+  # tags:
+  #  - deployment
   community.general.npm:
     name: npm
     path: /app
