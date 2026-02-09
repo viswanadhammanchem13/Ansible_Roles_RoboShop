@@ -25,8 +25,8 @@
   tags:
    - deployment
   community.general.npm:
-  name: npm
-  path: /app
+    name: npm
+    path: /app
 
 - name: Service Restart
   ansible.builtin.service:
