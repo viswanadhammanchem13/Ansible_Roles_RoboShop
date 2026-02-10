@@ -17,6 +17,11 @@
       state: started
       enabled: yes
 
+  # - name: check roboshop user is created or not.
+  #   ansible.builtin.command: id roboshop
+  #   register: User_Output
+  #   ignore_errors: true
+
   - name: Setting username and password
     community.rabbitmq.rabbitmq_user:
       user: roboshop
