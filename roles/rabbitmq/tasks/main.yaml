@@ -29,12 +29,13 @@
 
   - name: Printing the User Info
     ansible.builtin.debug:
-      msg: "{{ User is created with root password }}"
+      msg: "User is created with root password "
     when: User_Output.changed
 
 
   - name: Setting Permissions for user
     community.rabbitmq.rabbitmq_user:
+      user: roboshop
       permissions:
         - vhost: /
           configure_priv: .*
