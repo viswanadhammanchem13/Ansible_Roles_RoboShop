@@ -30,7 +30,7 @@
   - name: Printing the User Info
     ansible.builtin.debug:
       msg: "{{ User is created with root password }}"
-    when: User_Output.rc == 0
+    when: User_Output.changed
 
 
   - name: Setting Permissions for user
