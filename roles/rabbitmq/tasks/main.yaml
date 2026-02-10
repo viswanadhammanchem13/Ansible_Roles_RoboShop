@@ -22,15 +22,15 @@
       user: roboshop
       password: "{{ MY_Rabbitmq_PWD }}"
     register: User_Output
-    debug:
+    # debug:
+    #   msg:"User is created with root password"
+    # when: User_Output.rc == 0
+
+
+  - name: Printing the User Info
+    ansible.builtin.debug:
       msg:"User is created with root password"
     when: User_Output.rc == 0
-
-
-  # - name: Printing the User Info
-  #   ansible.builtin.debug:
-  #     msg:"User is created with root password"
-  #   when: User_Output.rc == 0
 
 
   - name: Setting Permissions for user
