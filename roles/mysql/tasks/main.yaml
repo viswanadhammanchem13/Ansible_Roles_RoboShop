@@ -10,4 +10,4 @@
       enabled: yes
 
   - name: setting root password
-    ansible.builtin.command: mysql_secure_installation --set-root-pass {{ MY_SQL_ROOTPWD }}
+    ansible.builtin.command: mysql_secure_installation --set-root-pass "{{ MY_SQL_ROOTPWD }}"
