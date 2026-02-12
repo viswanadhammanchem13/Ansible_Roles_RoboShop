@@ -12,10 +12,10 @@
   - name: Installing Pathon Packages
     ansible.builtin.pip:
       name: "{{ item }}" 
-    executable: pip3.9
+      executable: pip3.9
     loop:
     - boto3
     - botocore
-      
+
   - name: setting root password
     ansible.builtin.command: mysql_secure_installation --set-root-pass {{ MY_SQL_ROOTPWD }}
