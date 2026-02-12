@@ -25,7 +25,7 @@
   - name: Setting username and password
     community.rabbitmq.rabbitmq_user:
       user: roboshop
-      password: "{{ MY_Rabbitmq_PWD }}"
+      # password: "{{ MY_Rabbitmq_PWD }}"
     register: User_Output
     # debug:
     #   msg:"User is created with root password"
