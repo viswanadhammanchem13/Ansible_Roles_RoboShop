@@ -17,19 +17,19 @@
       state: started
       enabled: yes
 
-  # - name: check roboshop user is created or not.
-  #   ansible.builtin.command: id roboshop
-  #   register: User_Output
-  #   ignore_errors: true
+  - name: check roboshop user is created or not.
+    ansible.builtin.command: id roboshop
+    register: User_Output
+    ignore_errors: true
 
   - name: Setting username and password
     community.rabbitmq.rabbitmq_user:
       user: roboshop
-      # password: "{{ MY_Rabbitmq_PWD }}"
+      password: "{{ MY_Rabbitmq_PWD }}"
     register: User_Output
-    # debug:
-    #   msg:"User is created with root password"
-    # when: User_Output.rc == 0
+    debug:
+      msg:"User is created with root password"
+    when: User_Output.rc == 0
 
 
   - name: Printing the User Info
