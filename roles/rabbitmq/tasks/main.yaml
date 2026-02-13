@@ -28,10 +28,10 @@
       password: "{{ MY_Rabbitmq_PWD }}"
     register: User_Output
 
-  - name: Check RabbitMQ user name created or not
-    ansible.builtin.debug:
-      msg:"User is created with root password"
-    # when: User_Output
+  # - name: Check RabbitMQ user name created or not
+  #   ansible.builtin.debug:
+  #     msg:"User is created with root password"
+  #   when: User_Output
 
 
   - name: Printing the User Info
