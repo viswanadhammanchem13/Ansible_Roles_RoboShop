@@ -34,11 +34,15 @@
   #   when: User_Output
 
 
-  - name: Printing the User Info
+  - name: User already exists
     ansible.builtin.debug:
-      msg: "User is Already created"
-    when: User_Output.defined and User_Output.changed
+      msg: "RabbitMQ user roboshop already exists"
+    when: not User_Output.changed
 
+  - name: User newly created
+    ansible.builtin.debug:
+      msg: "RabbitMQ user roboshop is newly created"
+    when: User_Output.changed
 
   - name: Setting Permissions for user
     community.rabbitmq.rabbitmq_user:
