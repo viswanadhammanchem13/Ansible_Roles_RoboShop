@@ -36,8 +36,8 @@
 
   - name: Printing the User Info
     ansible.builtin.debug:
-      msg: "User is created with root password "
-    when: User_Output.changed
+      msg: "User is Already created"
+    when: User_Output.defined and User_Output.changed
 
 
   - name: Setting Permissions for user
