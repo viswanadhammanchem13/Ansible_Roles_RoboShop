@@ -1,7 +1,7 @@
 - name: "Configuring {{ component }}"
   become: yes 
   hosts: "{{ component }}"
-  # vars_files:
-  # - vault/rabbitmq.yaml
+  vars_files:
+  - vault/rabbitmq.yaml
   roles:
   - "{{ component }}"
